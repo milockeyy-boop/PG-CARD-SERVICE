@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ed1c2e">
+<title>Pusat Bantuan | PG CARD</title>
+<style>
+:root{--red:#ed1c2e;--red-dark:#c91022;--ink:#17171b;--muted:#686873;--line:#e8e8ed;--bg:#f6f6f8;--white:#fff;--soft:#fff0f1;--green:#16844a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+a{color:inherit}.hero{background:radial-gradient(circle at 90% 5%,#ff6672 0,transparent 30%),linear-gradient(125deg,#16161b 0%,#25252d 65%,#3a2025 100%);color:white;padding:24px 18px 62px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #ffffff20;border-radius:50%;right:-80px;bottom:-170px;box-shadow:0 0 0 28px #ffffff08,0 0 0 58px #ffffff06}.wrap{width:min(1040px,100% - 36px);margin:auto;position:relative;z-index:1}.top{display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{display:flex;align-items:center;min-width:0}.brand img{display:block;width:clamp(145px,20vw,205px);max-height:48px;object-fit:contain;object-position:left center}.brand-fallback{font-weight:850;letter-spacing:.07em;font-size:17px}.back{border:1px solid #ffffff40;border-radius:999px;padding:9px 14px;text-decoration:none;font-size:13px;font-weight:700;white-space:nowrap}.back:hover{background:#ffffff12}.eyebrow{margin:42px 0 8px;color:#ff929b;text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:800}.hero h1{font-size:clamp(32px,5vw,50px);line-height:1.05;letter-spacing:-.04em;margin:0;max-width:650px}.intro{color:#e4e4e9;max-width:600px;margin:16px 0 0;font-size:15px}.main{margin:-30px auto 0;position:relative;z-index:2;width:min(1040px,100% - 36px);padding-bottom:48px}.search-panel{background:white;border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 16px 38px #14141b0d}.search-wrap{display:flex;gap:10px;align-items:center;background:#f7f7f9;border:1px solid #e6e6eb;border-radius:12px;padding:0 14px}.search-wrap:focus-within{border-color:var(--red);box-shadow:0 0 0 3px #ed1c2e17}.search-wrap input{border:0;outline:0;background:transparent;width:100%;height:50px;font:inherit;color:var(--ink)}.search-icon{font-size:20px;color:var(--muted)}.hint{font-size:12px;color:var(--muted);margin:9px 2px 0}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 24px}.quick-card{background:white;border:1px solid var(--line);border-radius:15px;padding:17px;text-decoration:none;display:flex;gap:12px;align-items:flex-start;transition:transform .18s,border-color .18s}.quick-card:hover{transform:translateY(-2px);border-color:#ffc3c8}.quick-icon{flex:0 0 40px;height:40px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:20px}.quick strong{display:block;font-size:14px}.quick small{display:block;color:var(--muted);font-size:12px;margin-top:3px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 2px 12px}.section-head h2{font-size:22px;letter-spacing:-.025em;margin:0}.section-head p{font-size:12px;color:var(--muted);margin:4px 0 0}.count{color:var(--muted);font-size:12px;white-space:nowrap}.categories{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 13px}.cat{border:1px solid var(--line);border-radius:999px;padding:8px 13px;background:white;font:inherit;font-size:12px;font-weight:750;color:#4e4e58;cursor:pointer}.cat.active,.cat:hover{background:var(--ink);border-color:var(--ink);color:white}.faq-list{display:grid;gap:10px}.faq{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden}.faq[hidden]{display:none}.faq summary{list-style:none;cursor:pointer;padding:17px 48px 17px 18px;font-size:14px;font-weight:750;position:relative}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);width:25px;height:25px;display:grid;place-items:center;border-radius:50%;background:#f3f3f6;color:var(--red);font-size:19px;font-weight:500}.faq[open] summary:after{content:"−";background:var(--soft)}.answer{padding:0 18px 18px;color:#5b5b65;font-size:13px;max-width:850px}.answer p{margin:0 0 8px}.answer p:last-child{margin-bottom:0}.answer a{color:var(--red-dark);font-weight:700}.no-results{display:none;background:white;border:1px dashed #d7d7df;border-radius:14px;text-align:center;padding:30px;color:var(--muted);font-size:14px}.no-results.show{display:block}.contact-panel{margin-top:25px;background:linear-gradient(115deg,#ed1c2e,#c91022);border-radius:18px;color:white;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:20px}.contact-panel h2{font-size:22px;margin:0 0 5px}.contact-panel p{margin:0;color:#ffe7e9;font-size:13px;max-width:540px}.contact-actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border-radius:999px;padding:11px 16px;text-decoration:none;font-weight:800;font-size:12px;display:inline-flex;justify-content:center;align-items:center;border:1px solid transparent;cursor:pointer;white-space:nowrap}.btn.white{background:white;color:var(--red-dark)}.btn.outline{color:white;border-color:#ffffff8c;background:#ffffff10}.footer{text-align:center;color:#888891;font-size:11px;padding:25px 10px 0}.footer strong{color:#50505a;letter-spacing:.05em}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#202027;color:white;padding:11px 16px;border-radius:999px;font-size:12px;transition:.2s;z-index:10}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:700px){.hero{padding:18px 0 55px}.wrap,.main{width:calc(100% - 24px)}.eyebrow{margin-top:34px}.quick{grid-template-columns:1fr}.quick-card{padding:14px}.search-panel{padding:14px}.section-head{align-items:start;flex-direction:column;gap:4px}.contact-panel{align-items:flex-start;flex-direction:column;padding:21px}.contact-actions{width:100%}.contact-actions .btn{flex:1}.back{font-size:11px;padding:8px 10px}.brand img{width:145px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="./" aria-label="PG CARD — kembali ke halaman utama"><img src="./logo-pg-card-white-transparent.png" alt="PG CARD — Pakuwon Mall Solo Baru" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="brand-fallback" style="display:none;color:white">PG CARD</span></a>
+      <a class="back" href="./">← Kembali ke layanan</a>
+    </div>
+    <p class="eyebrow">We Value Your Loyalty</p>
+    <h1>Pusat Bantuan</h1>
+    <p class="intro">Butuh bantuan menggunakan PG CARD? Temukan jawaban pertanyaan umum atau hubungi Customer Service kami.</p>
+  </div>
+</header>
+<main class="main">
+  <section class="search-panel" aria-label="Pencarian bantuan">
+    <div class="search-wrap"><span class="search-icon" aria-hidden="true">⌕</span><input id="faqSearch" type="search" placeholder="Cari bantuan, misalnya: tambah poin, merchandise..." autocomplete="off" aria-label="Cari pertanyaan bantuan"></div>
+    <p class="hint">Ketik kata kunci atau pilih kategori untuk menemukan jawaban dengan cepat.</p>
+  </section>
+  <section class="quick" aria-label="Akses cepat">
+    <a class="quick-card" href="./"><span class="quick-icon" aria-hidden="true">▣</span><span><strong>Layanan PG CARD</strong><small>Kembali ke menu layanan utama</small></span></a>
+    <a class="quick-card" href="./tenant.html"><span class="quick-icon" aria-hidden="true">⌖</span><span><strong>Daftar Tenant</strong><small>Cari tenant partisipan PG CARD</small></span></a>
+    <a class="quick-card" href="mailto:cspakuwonsolobaru@gmail.com?subject=Bantuan%20PG%20CARD"><span class="quick-icon" aria-hidden="true">✉</span><span><strong>Email Customer Service</strong><small>Kirim pertanyaan ke tim kami</small></span></a>
+  </section>
+  <section aria-labelledby="faqTitle">
+    <div class="section-head"><div><h2 id="faqTitle">Pertanyaan yang sering ditanyakan</h2><p>Pilih pertanyaan untuk melihat jawabannya.</p></div><span class="count" id="faqCount" aria-live="polite">8 pertanyaan</span></div>
+    <div class="categories" role="group" aria-label="Filter kategori">
+      <button class="cat active" type="button" data-category="all" aria-pressed="true">Semua</button>
+      <button class="cat" type="button" data-category="poin" aria-pressed="false">Poin PG CARD</button>
+      <button class="cat" type="button" data-category="merch" aria-pressed="false">Merchandise</button>
+      <button class="cat" type="button" data-category="promo" aria-pressed="false">Promo & Benefit</button>
+      <button class="cat" type="button" data-category="akun" aria-pressed="false">Kartu & Bantuan</button>
+    </div>
+    <div class="faq-list" id="faqList">
+      <details class="faq" data-category="poin" data-search="cara menambah poin transaksi belanja bukti pembayaran struk">
+        <summary>Bagaimana cara menambahkan poin PG CARD?</summary>
+        <div class="answer"><p>Lakukan transaksi di tenant partisipan PG CARD Pakuwon Mall Solo Baru. Setelah transaksi, kunjungi counter Customer Service untuk proses penambahan poin dan siapkan bukti transaksi yang diperlukan.</p><p>Jika membutuhkan panduan lebih lanjut, hubungi Customer Service melalui email.</p></div>
+      </details>
+      <details class="faq" data-category="poin" data-search="berapa lama poin masuk saldo transaksi">
+        <summary>Kenapa poin saya belum bertambah?</summary>
+        <div class="answer"><p>Pastikan transaksi dilakukan di tenant partisipan dan bukti transaksi telah disampaikan kepada Customer Service untuk diproses. Jika poin belum bertambah setelah proses tersebut, kirimkan pertanyaan melalui email dan sertakan detail transaksi agar dapat diperiksa.</p></div>
+      </details>
+      <details class="faq" data-category="merch" data-search="cara tukar redeem poin merchandise hadiah">
+        <summary>Bagaimana cara menukarkan poin dengan merchandise?</summary>
+        <div class="answer"><p>Poin PG CARD dapat ditukarkan dengan merchandise yang tersedia. Periksa menu <a href="./merchandise.html">Merchandise PG CARD</a> untuk melihat kebutuhan poin dan status ketersediaan, lalu kunjungi PG Lounge di lantai Upper Ground (UG) untuk informasi proses penukaran.</p></div>
+      </details>
+      <details class="faq" data-category="merch" data-search="stok habis tersedia merchandise barang">
+        <summary>Bagaimana jika merchandise berstatus habis?</summary>
+        <div class="answer"><p>Status ketersediaan mengikuti data yang ditampilkan pada halaman Merchandise. Jika produk berstatus habis atau kamu ingin memastikan stok terbaru, hubungi Customer Service sebelum datang.</p></div>
+      </details>
+      <details class="faq" data-category="promo" data-search="promo benefit diskon cashback syarat ketentuan tenant">
+        <summary>Di mana saya bisa melihat promo dan benefit?</summary>
+        <div class="answer"><p>Buka menu <a href="./promo.html">Promo & Benefit</a> untuk melihat informasi promo yang ditampilkan pada website. Perhatikan periode serta syarat dan ketentuan setiap promo. Untuk memastikan promo masih berlaku, konfirmasikan kepada Customer Service atau tenant terkait.</p></div>
+      </details>
+      <details class="faq" data-category="akun" data-search="buat daftar mendapatkan kartu pg card registrasi">
+        <summary>Bagaimana cara mendapatkan PG CARD?</summary>
+        <div class="answer"><p>Kunjungi menu utama website PG CARD dan pilih layanan <strong>GET YOUR PG CARD</strong>. Ikuti instruksi yang ditampilkan pada halaman layanan tersebut.</p></div>
+      </details>
+      <details class="faq" data-category="akun" data-search="upload bukti bayar pembayaran tambah poin formulir">
+        <summary>Di mana saya mengirim bukti pembayaran?</summary>
+        <div class="answer"><p>Dari menu utama website, pilih <strong>UPLOAD BUKTI BAYAR</strong> dan ikuti petunjuk pada formulir. Pastikan nama dan bukti transaksi yang dikirim sudah benar serta terbaca jelas.</p></div>
+      </details>
+      <details class="faq" data-category="akun" data-search="hubungi kontak email customer service cs pertanyaan kendala">
+        <summary>Bagaimana cara menghubungi Customer Service?</summary>
+        <div class="answer"><p>Kirim email ke <a href="mailto:cspakuwonsolobaru@gmail.com">cspakuwonsolobaru@gmail.com</a>. Jelaskan pertanyaan atau kendala secara singkat agar tim dapat membantu dengan lebih tepat.</p></div>
+      </details>
+    </div>
+    <div class="no-results" id="noResults"><strong>Pertanyaan belum ditemukan.</strong><br>Coba kata kunci lain atau pilih kategori “Semua”.</div>
+  </section>
+  <section class="contact-panel" aria-label="Hubungi Customer Service">
+    <div><h2>Masih butuh bantuan?</h2><p>Tim Customer Service siap membantu pertanyaan seputar layanan PG CARD Pakuwon Mall Solo Baru.</p></div>
+    <div class="contact-actions"><a class="btn white" href="mailto:cspakuwonsolobaru@gmail.com?subject=Bantuan%20PG%20CARD">✉ Email Customer Service</a><button class="btn outline" type="button" id="copyEmail">Salin Email</button></div>
+  </section>
+  <footer class="footer"><strong>PG CARD · PAKUWON MALL SOLO BARU</strong><br>We Value Your Loyalty</footer>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite">Email berhasil disalin</div>
+<script>
+(() => {
+  const search = document.getElementById('faqSearch');
+  const cards = [...document.querySelectorAll('.faq')];
+  const categoryButtons = [...document.querySelectorAll('.cat')];
+  const count = document.getElementById('faqCount');
+  const noResults = document.getElementById('noResults');
+  let activeCategory = 'all';
+  function render() {
+    const q = search.value.trim().toLocaleLowerCase('id');
+    let visible = 0;
+    cards.forEach(card => {
+      const matchesCategory = activeCategory === 'all' || card.dataset.category === activeCategory;
+      const matchesText = !q || (card.innerText + ' ' + card.dataset.search).toLocaleLowerCase('id').includes(q);
+      const show = matchesCategory && matchesText;
+      card.hidden = !show;
+      if (show) visible++;
+      else card.open = false;
+    });
+    count.textContent = visible + ' pertanyaan';
+    noResults.classList.toggle('show', visible === 0);
+  }
+  search.addEventListener('input', render);
+  categoryButtons.forEach(button => button.addEventListener('click', () => {
+    activeCategory = button.dataset.category;
+    categoryButtons.forEach(b => {
+      const active = b === button;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', String(active));
+    });
+    render();
+  }));
+  document.getElementById('copyEmail').addEventListener('click', async () => {
+    const email = 'cspakuwonsolobaru@gmail.com';
+    try {
+      await navigator.clipboard.writeText(email);
+      showToast('Email berhasil disalin');
+    } catch (e) {
+      const el = document.createElement('textarea');
+      el.value = email; el.style.position = 'fixed'; el.style.opacity = '0';
+      document.body.appendChild(el); el.select();
+      const ok = document.execCommand('copy'); el.remove();
+      showToast(ok ? 'Email berhasil disalin' : email);
+    }
+  });
+  let toastTimer;
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message; toast.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+  }
+  render();
+})();
+</script>
+</body>
+</html>
