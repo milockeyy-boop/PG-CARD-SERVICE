@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16171c">
+  <meta name="description" content="Daftar tenant participant PG CARD Pakuwon Mall Solo Baru.">
+  <title>Tenant Participant PG | PG CARD</title>
+  <style>
+    :root{--red:#e9252e;--red-dark:#c91e27;--ink:#191a1f;--muted:#70727a;--line:#e8e8eb;--surface:#fff;--soft:#f5f5f7}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#f3f3f5;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+    .hero{background:linear-gradient(135deg,rgba(22,23,28,.97),rgba(52,29,34,.96));color:#fff;padding:26px 20px 34px}
+    .hero-inner,.main{width:min(100% - 32px,1050px);margin:auto}
+    .topline{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:30px}
+    .brand{font-weight:800;letter-spacing:1.4px;font-size:14px}
+    .brand span{color:var(--red)}
+    .back{color:#fff;text-decoration:none;border:1px solid #ffffff55;border-radius:999px;padding:10px 14px;font-size:13px;font-weight:700}
+    .back:hover{background:#ffffff18}
+    .eyebrow{margin:0 0 8px;color:#ff7379;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+    h1{font-size:clamp(28px,5vw,44px);line-height:1.08;margin:0 0 12px}
+    .intro{margin:0;color:#e0e0e4;line-height:1.6;max-width:620px;font-size:15px}
+    .main{padding:24px 0 48px}
+    .toolbar{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:12px;margin-bottom:16px}
+    .search-wrap{position:relative}
+    .search-icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#85858c;font-size:19px;pointer-events:none}
+    input,select{width:100%;min-height:50px;border:1px solid #dedee3;border-radius:13px;background:#fff;color:var(--ink);font-size:15px;outline:none}
+    input{padding:0 15px 0 43px}
+    select{padding:0 13px;cursor:pointer}
+    input:focus,select:focus{border-color:var(--red);box-shadow:0 0 0 3px #e9252e1c}
+    .summary{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 2px 22px;color:var(--muted);font-size:13px}
+    .count{font-weight:800;color:var(--ink)}
+    .floor-section{margin:0 0 26px}
+    .floor-heading{display:flex;align-items:center;gap:10px;margin:0 0 12px;font-size:18px}
+    .floor-heading:before{content:"";width:5px;height:22px;border-radius:5px;background:var(--red)}
+    .floor-count{margin-left:auto;font-size:12px;color:var(--muted);font-weight:600}
+    .tenant-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .tenant-card{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 14px 13px;box-shadow:0 2px 7px #15151b05}
+    .tenant-name{margin:0 0 8px;font-size:14px;font-weight:800;line-height:1.35;overflow-wrap:anywhere}
+    .tenant-meta{display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+    .category{display:inline-flex;background:#fbeaec;color:#a71922;border-radius:999px;padding:5px 8px;font-size:10px;font-weight:700;line-height:1.2}
+    .empty{background:#fff;border:1px dashed #d7d7dc;border-radius:14px;text-align:center;padding:36px 18px;color:var(--muted);line-height:1.6}
+    .footer{text-align:center;padding:24px 16px 30px;color:#74747b;font-size:12px}
+    .footer strong{color:var(--red-dark)}
+    @media(max-width:700px){.tenant-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.toolbar{grid-template-columns:1fr}.hero{padding-top:20px}.topline{margin-bottom:24px}}
+    @media(max-width:390px){.tenant-grid{grid-template-columns:1fr}.tenant-card{padding:13px}.hero-inner,.main{width:min(100% - 24px,1050px)}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="topline">
+        <div class="brand"><span>PG</span> CARD <span style="color:#fff;font-weight:400">| PAKUWON MALL SOLO BARU</span></div>
+        <a class="back" href="./">← Kembali ke layanan</a>
+      </div>
+      <p class="eyebrow">PG CARD PRIVILEGE</p>
+      <h1>Tenant Participant PG</h1>
+      <p class="intro">Temukan tenant yang berpartisipasi dalam program PG CARD. Cari nama tenant atau pilih lantai untuk melihat daftar yang tersedia.</p>
+    </div>
+  </header>
+  <main class="main">
+    <div class="toolbar">
+      <label class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="Cari nama tenant atau kategori..." autocomplete="off" aria-label="Cari nama tenant atau kategori">
+      </label>
+      <select id="floor" aria-label="Filter lantai">
+        <option value="">Semua lantai</option>
+        <option value="Lantai B1">Lantai B1</option>
+        <option value="Lantai LG">Lantai LG</option>
+        <option value="Lantai GF">Lantai GF</option>
+        <option value="Lantai UG">Lantai UG</option>
+        <option value="Lantai 1">Lantai 1</option>
+        <option value="Lantai 2">Lantai 2</option>
+      </select>
+    </div>
+    <div class="summary">
+      <span id="resultText">Memuat daftar tenant...</span>
+      <span class="count" id="totalCount"></span>
+    </div>
+    <div id="tenantList" aria-live="polite"></div>
+  </main>
+  <footer class="footer">We Value Your Loyalty <br><strong>PG CARD</strong> · Pakuwon Mall Solo Baru</footer>
+  <script>
+    const tenants = [{"name": "HOUSE OF WOK", "floor": "Lantai B1", "category": "Food & Beverages"}, {"name": "METOOCEL", "floor": "Lantai B1", "category": "Souvenirs & Accessories"}, {"name": "PASTEL", "floor": "Lantai B1", "category": "Souvenirs & Accessories"}, {"name": "TIAN SEN", "floor": "Lantai B1", "category": "Services"}, {"name": "WARUNG KULINER 69", "floor": "Lantai B1", "category": "Food & Beverages"}, {"name": "FEMMEWEAR", "floor": "Lantai LG", "category": "Fashion"}, {"name": "HASSYA HIJAB", "floor": "Lantai LG", "category": "Fashion"}, {"name": "NJ KIDS", "floor": "Lantai LG", "category": "Kids"}, {"name": "NOBBY", "floor": "Lantai LG", "category": "Fashion"}, {"name": "OLLA", "floor": "Lantai LG", "category": "Fashion"}, {"name": "SNEAKERS SOS", "floor": "Lantai LG", "category": "Sport"}, {"name": "C & F", "floor": "Lantai GF", "category": "Health & Beauty"}, {"name": "CHATIME", "floor": "Lantai GF", "category": "Food & Beverages"}, {"name": "DIGIMAP", "floor": "Lantai GF", "category": "Gadget"}, {"name": "DONINI", "floor": "Lantai GF", "category": "Footwear & Bag"}, {"name": "ET CETERA", "floor": "Lantai GF", "category": "Fashion"}, {"name": "EXECUTIVE COLORBOX", "floor": "Lantai GF", "category": "Fashion"}, {"name": "FORE", "floor": "Lantai GF", "category": "Food & Beverages"}, {"name": "GARMIN", "floor": "Lantai GF", "category": "Watches"}, {"name": "GIORDANO", "floor": "Lantai GF", "category": "Fashion"}, {"name": "J.CO", "floor": "Lantai GF", "category": "Food & Beverages"}, {"name": "KFC", "floor": "Lantai GF", "category": "Food & Beverages"}, {"name": "KIMUKATSU", "floor": "Lantai GF", "category": "Food & Beverages"}, {"name": "LASCADA", "floor": "Lantai GF", "category": "Fashion"}, {"name": "LEVIS", "floor": "Lantai GF", "category": "Fashion"}, {"name": "MAKO", "floor": "Lantai GF", "category": "Food & Beverages"}, {"name": "OFFICIAL RETAIL DORAEMON", "floor": "Lantai GF", "category": "BAZAAR"}, {"name": "RAMEN YA", "floor": "Lantai GF", "category": "Food & Beverages"}, {"name": "SATURDAYS", "floor": "Lantai GF", "category": "Eyewear & Optical"}, {"name": "STARBUCKS", "floor": "Lantai GF", "category": "Food & Beverages"}, {"name": "SUSHI TEI", "floor": "Lantai GF", "category": "Food & Beverages"}, {"name": "THE PALACE", "floor": "Lantai GF", "category": "Jewellery"}, {"name": "UNIQLO", "floor": "Lantai GF", "category": "Fashion"}, {"name": "WAHYU REDJO", "floor": "Lantai GF", "category": "Jewellery"}, {"name": "WATCH CLUB", "floor": "Lantai GF", "category": "Watches"}, {"name": "WATCH STUDIO", "floor": "Lantai GF", "category": "Watches"}, {"name": "WATCH STUDIO", "floor": "Lantai GF", "category": "Watches"}, {"name": "ZAXY", "floor": "Lantai GF", "category": "Footwear & Bag"}, {"name": "3SECOND", "floor": "Lantai UG", "category": "Fashion"}, {"name": "BELLAGIO", "floor": "Lantai UG", "category": "Footwear & Bag"}, {"name": "CINDY", "floor": "Lantai UG", "category": "Souvenirs & Accessories"}, {"name": "CONVERSE", "floor": "Lantai UG", "category": "Sport"}, {"name": "CROCS", "floor": "Lantai UG", "category": "Footwear & Bag"}, {"name": "DUST", "floor": "Lantai UG", "category": "Fashion"}, {"name": "GOSH", "floor": "Lantai UG", "category": "Footwear & Bag"}, {"name": "GUARDIAN", "floor": "Lantai UG", "category": "Health & Beauty"}, {"name": "LARUSSO", "floor": "Lantai UG", "category": "Fashion"}, {"name": "LOGO", "floor": "Lantai UG", "category": "Fashion"}, {"name": "M231", "floor": "Lantai UG", "category": "Fashion"}, {"name": "MEN CIRCLE", "floor": "Lantai UG", "category": "Fashion"}, {"name": "MOC", "floor": "Lantai UG", "category": "Fashion"}, {"name": "MY STYLE", "floor": "Lantai UG", "category": "Fashion"}, {"name": "OSELLA SHOWROOM", "floor": "Lantai UG", "category": "Fashion"}, {"name": "SANCHA", "floor": "Lantai UG", "category": "Food & Beverages"}, {"name": "SOCIOLLA", "floor": "Lantai UG", "category": "Health & Beauty"}, {"name": "STROBERI", "floor": "Lantai UG", "category": "Souvenirs & Accessories"}, {"name": "TEH GARDOE", "floor": "Lantai UG", "category": "Food & Beverages"}, {"name": "THIS IS APRIL", "floor": "Lantai UG", "category": "Fashion"}, {"name": "TOKO MAS ISMOYO", "floor": "Lantai UG", "category": "Jewellery"}, {"name": "TOYS KINGDOM", "floor": "Lantai UG", "category": "Kids"}, {"name": "TRISET", "floor": "Lantai UG", "category": "Fashion"}, {"name": "URBAN & CO", "floor": "Lantai UG", "category": "Footwear & Bag"}, {"name": "ADIDAS", "floor": "Lantai 1", "category": "Sport"}, {"name": "ASICS", "floor": "Lantai 1", "category": "Footwear & Bag"}, {"name": "BAGS CITY", "floor": "Lantai 1", "category": "Footwear & Bag"}, {"name": "BLIBLI", "floor": "Lantai 1", "category": "Gadget"}, {"name": "DE WAVE", "floor": "Lantai 1", "category": "Services"}, {"name": "ERAFONE", "floor": "Lantai 1", "category": "Gadget"}, {"name": "FISIK SPORT", "floor": "Lantai 1", "category": "Sport"}, {"name": "GINO MARIANI", "floor": "Lantai 1", "category": "Footwear & Bag"}, {"name": "GLOW & GO", "floor": "Lantai 1", "category": "Health & Beauty"}, {"name": "HEAVEN SCENT", "floor": "Lantai 1", "category": "Souvenirs & Accessories"}, {"name": "IQOS", "floor": "Lantai 1", "category": "Hobby, Entertainment & Others"}, {"name": "MINISO", "floor": "Lantai 1", "category": "Souvenirs & Accessories"}, {"name": "OH SOME", "floor": "Lantai 1", "category": "Souvenirs & Accessories"}, {"name": "OPPO STORE", "floor": "Lantai 1", "category": "Gadget"}, {"name": "ORISKIN", "floor": "Lantai 1", "category": "Health & Beauty"}, {"name": "PUMA", "floor": "Lantai 1", "category": "Sport"}, {"name": "SALON CHRISTOPHER", "floor": "Lantai 1", "category": "Services"}, {"name": "SAMSUNG", "floor": "Lantai 1", "category": "Gadget"}, {"name": "SKECHERS", "floor": "Lantai 1", "category": "Sport"}, {"name": "SPORTS STATION", "floor": "Lantai 1", "category": "Sport"}, {"name": "TOMORO COFFEE", "floor": "Lantai 1", "category": "Food & Beverages"}, {"name": "TRIXIE", "floor": "Lantai 1", "category": "Health & Beauty"}, {"name": "UBS", "floor": "Lantai 1", "category": "Jewellery"}, {"name": "VANS", "floor": "Lantai 1", "category": "Sport"}, {"name": "WATSONS", "floor": "Lantai 1", "category": "Health & Beauty"}, {"name": "XIAOMI STORE", "floor": "Lantai 1", "category": "Gadget"}, {"name": "A & W", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "ASIAN WAFFLE", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "AYAM KEPRABON", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "BAKSO KINASIH", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "BAKSO KOTA CAK MAN", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "BAKWAN MALANG MERDEKA", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "BATAGOR & PEMPEK SEGARA", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "BLACK KEBAB", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "BOOST JUICE", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "BREAD & BUTTER BAKERY", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "CFC", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "CHIFRY", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "CHUYU", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "DAPUR NYAH TENGAH", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "DAUN LADA", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "EDEN KOPI", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "ENDOPHIRNS", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "ES TELLER 77", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "FAN FRIES", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "GAMCHI", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "IMPERIAL KITCHEN", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "ITALIAN DELIGHT", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "JUMBO TEA", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "KAG", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "KALIS", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "KEDAI COBEK", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "KEDAI SAMBAL RESTO", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "KO - KOK", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "KRESS", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "KRISNA JR", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "KUSUMA SARI", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "MALING SEGO", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "MBOK MARNI", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "MCDonald's", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "MENDOAN BANYUMAS", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "MIE HORIZON", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "MIE KEPRABON", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "NASGOR 69", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "NASI GORENG TOP", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "NASI KULIT JONO", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "PEMPEK FARINA", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "PENTOL MONSTER", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "PUYO", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "RAMEN 1", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "REDDOG", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "REJUVE", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "ROTI BOY", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "SHAKE SHAKE IN A TUB", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "SHAKE SHAKE IN A TUB", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "SHIHLIN", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "SOLARIA", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "SOLO STEAK", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "Sona Stret", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "SOUR SALLY", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "STEAK MOEN-MOEN", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "SUSHIGO", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "TEH GARDOE", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "TONG TJI EXPRESS", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "TONG TJI TEA HOUSE", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "WARUNG MBAK KALIS", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "WINGSTOP", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "XING FU TANG", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "YAMIE PANDA", "floor": "Lantai 2", "category": "Food & Beverages"}, {"name": "YOSHINOYA", "floor": "Lantai 2", "category": "Food & Beverages"}];
+    const floorOrder = ["Lantai B1","Lantai LG","Lantai GF","Lantai UG","Lantai 1","Lantai 2"];
+    const searchInput = document.getElementById("search");
+    const floorInput = document.getElementById("floor");
+    const list = document.getElementById("tenantList");
+    const resultText = document.getElementById("resultText");
+    const totalCount = document.getElementById("totalCount");
+
+    function escapeHTML(value) {
+      return String(value).replace(/[&<>"']/g, ch => ({
+        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+      }[ch]));
+    }
+
+    function render() {
+      const query = searchInput.value.trim().toLocaleLowerCase("id");
+      const selectedFloor = floorInput.value;
+      const filtered = tenants.filter(t => {
+        const matchesQuery = (t.name + " " + t.category + " " + t.floor).toLocaleLowerCase("id").includes(query);
+        return matchesQuery && (!selectedFloor || t.floor === selectedFloor);
+      });
+      resultText.textContent = query || selectedFloor ? "Hasil pencarian" : "Daftar tenant aktif";
+      totalCount.textContent = filtered.length + " tenant";
+
+      if (!filtered.length) {
+        list.innerHTML = '<div class="empty"><strong>Tenant tidak ditemukan.</strong><br>Coba kata kunci lain atau pilih semua lantai.</div>';
+        return;
+      }
+
+      const floors = floorOrder.filter(f => filtered.some(t => t.floor === f));
+      list.innerHTML = floors.map(floor => {
+        const items = filtered.filter(t => t.floor === floor);
+        return `<section class="floor-section">
+          <h2 class="floor-heading">${escapeHTML(floor)} <span class="floor-count">${items.length} tenant</span></h2>
+          <div class="tenant-grid">${items.map(t => `<article class="tenant-card">
+            <h3 class="tenant-name">${escapeHTML(t.name)}</h3>
+            <div class="tenant-meta"><span class="category">${escapeHTML(t.category || "Tenant")}</span></div>
+          </article>`).join("")}</div>
+        </section>`;
+      }).join("");
+    }
+
+    searchInput.addEventListener("input", render);
+    floorInput.addEventListener("change", render);
+    render();
+  </script>
+</body>
+</html>
